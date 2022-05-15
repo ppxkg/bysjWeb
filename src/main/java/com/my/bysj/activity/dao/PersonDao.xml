@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.my.bysj.activity.dao.PersonDao">
+    <insert id="savePerson">
+		insert into person(
+			id,
+            name,
+            time,
+            temperature
+		)
+		values (
+			#{id},
+			#{name},
+			#{time},
+			#{temperature}
+		)
+	</insert>
+	
+	<select id="getPerson" resultType="Person">
+		select * from person;
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

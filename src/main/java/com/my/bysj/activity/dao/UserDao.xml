@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.my.bysj.activity.dao.UserDao">
+<select id="login" resultType="User">
+	select usernum,password from users where usernum=#{usernum} and password=#{password}
+</select>
+	<insert id="register">
+		insert into users(
+			username,
+			usernum,
+			password
+		)values (
+			#{username},
+			#{usernum},
+			#{password}
+		)
+	</insert>
+	<select id="getBulletin" resultType="Bulletin">
+		select * from bulletin
+	</select>
+	<insert id="setBulletin">
+		insert into bulletin(
+			id,
+			data ,
+			item,
+			time
+		)values (
+			#{id},
+			#{data},
+			#{item},
+			#{time}
+		)
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
